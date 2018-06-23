@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/secondLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.zihaochen.kyle.mortgagecalculator.OutputFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Output"
+            android:textColor="@android:color/black"
+            android:textSize="36sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:id="@+id/output_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvMonthlyPayAmountS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Monthly Payment (w/o property tax)"
+                    android:textColor="@android:color/black"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/tvMonthlyPayAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$0"
+                    android:textAlignment="viewStart"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/tvMonthlyPayAmountWPS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Monthly Payment (w/ property tax)"
+                    android:textColor="@android:color/black"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/tvMonthlyPayAmountWP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$0"
+                    android:textAlignment="viewStart"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/tvTotalInterestPaidS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Interest Paid"
+                    android:textColor="@android:color/black"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/tvTotalInterestPaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$0"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/tvTotalPropertyTaxPaidS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Property Tax Paid"
+                    android:textColor="@android:color/black"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/tvTotalPropertyTaxPaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$0"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/tvPayOffDateS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pay Off Date"
+                    android:textColor="@android:color/black"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/tvPayOffDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="36sp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

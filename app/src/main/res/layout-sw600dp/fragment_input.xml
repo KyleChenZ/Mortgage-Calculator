@@ -1,0 +1,214 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.zihaochen.kyle.mortgagecalculator.InputFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bCalculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input"
+            android:textColor="@android:color/black"
+            android:textSize="36sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:isScrollContainer="false">
+
+            <LinearLayout
+                android:id="@+id/input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvHomeValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Home Value ($)"
+                    android:textColor="@android:color/black"
+                    android:textSize="36sp"
+                    app:layout_constraintBottom_toTopOf="@+id/etHomeValue"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="31dp" />
+
+                <EditText
+                    android:id="@+id/etHomeValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:inputType="numberDecimal"
+                    android:textAllCaps="true"
+                    android:textIsSelectable="true"
+                    android:textSize="36sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tvHomeError"
+                    app:layout_constraintTop_toBottomOf="@+id/tvHomeValue"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="45dp" />
+
+                <TextView
+                    android:id="@+id/tvHomeError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="36sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tvDownPayment"
+                    app:layout_constraintTop_toBottomOf="@+id/etHomeValue" />
+
+                <TextView
+                    android:id="@+id/tvDownPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Down Payment ($)"
+                    android:textColor="@android:color/black"
+                    android:textSize="36sp"
+                    app:layout_constraintBottom_toTopOf="@+id/etDownPayment"
+                    app:layout_constraintTop_toBottomOf="@+id/etHomeValue"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="31dp" />
+
+                <EditText
+                    android:id="@+id/etDownPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:inputType="numberDecimal"
+                    android:textAllCaps="true"
+                    android:textIsSelectable="true"
+                    android:textSize="36sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tvDownError"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDownPayment"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="114dp" />
+
+                <TextView
+                    android:id="@+id/tvDownError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="36sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tvInterestRate"
+                    app:layout_constraintTop_toBottomOf="@+id/etDownPayment" />
+
+                <TextView
+                    android:id="@+id/tvInterestRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Yearly Interest Rate (%)"
+                    android:textColor="@android:color/black"
+                    android:textSize="36sp"
+                    app:layout_constraintBottom_toTopOf="@+id/etInterestRate"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDownError"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="31dp" />
+
+                <EditText
+                    android:id="@+id/etInterestRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:hint="0 - 100"
+                    android:inputType="numberDecimal"
+                    android:textAllCaps="true"
+                    android:textIsSelectable="true"
+                    android:textSize="36sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tvInterestError"
+                    app:layout_constraintTop_toBottomOf="@+id/tvInterestRate"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="181dp" />
+
+                <TextView
+                    android:id="@+id/tvInterestError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="36sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tvTerms"
+                    app:layout_constraintTop_toBottomOf="@+id/etInterestRate" />
+
+                <TextView
+                    android:id="@+id/tvTerms"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Terms (years)"
+                    android:textColor="@android:color/black"
+                    android:textSize="36sp"
+                    app:layout_constraintBottom_toTopOf="@+id/sTerms"
+                    app:layout_constraintTop_toBottomOf="@+id/tvInterestError"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="31dp" />
+
+                <Spinner
+                    android:id="@+id/sTerms"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:entries="@array/TermsInYear"
+                    app:layout_constraintBottom_toTopOf="@+id/tvPropertyTaxRate"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTerms"></Spinner>
+
+
+                <TextView
+                    android:id="@+id/tvPropertyTaxRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Property Tax Rate (%)"
+                    android:textColor="@android:color/black"
+                    android:textSize="36sp"
+                    app:layout_constraintBottom_toTopOf="@+id/etPropertyTaxRate"
+                    app:layout_constraintTop_toBottomOf="@+id/sTerms"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="31dp" />
+
+                <EditText
+                    android:id="@+id/etPropertyTaxRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:hint="Typical rate: 0.00 - 2.00"
+                    android:inputType="numberDecimal"
+                    android:textAllCaps="true"
+                    android:textIsSelectable="true"
+                    android:textSize="36sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tvPropertyError"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPropertyTaxRate"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="289dp" />
+
+                <TextView
+                    android:id="@+id/tvPropertyError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="36sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etPropertyTaxRate" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>
