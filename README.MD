@@ -16,3 +16,11 @@
 - Make sure to scroll to see all the contents for small screen devices
 - Press Reset button to clean all input and output
 - Error messages will be shown if some information are not provided
+
+## Screenshots:
+### Result of the input (landscape mode):
+![aftercalculation-nexus10-landmode](https://user-images.githubusercontent.com/21185752/41812122-d0402cae-76d1-11e8-9b34-5c337f297142.PNG)
+### After pressing the reset button (portrait mode):
+![afterreset-nexus10-portraitmode](https://user-images.githubusercontent.com/21185752/41812123-d0576b1c-76d1-11e8-9250-23840c15888f.PNG)
+### Error handling (portrait mode):
+![errorhandling-nexus5-portraitmode](https://user-images.githubusercontent.com/21185752/41812124-d06e3482-76d1-11e8-8b4b-38a8dbb5d0b0.PNG)
